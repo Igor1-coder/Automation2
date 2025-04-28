@@ -13,14 +13,14 @@ def test_your_function():
     service = Service(ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service, options=options)
     wait = WebDriverWait(driver, 5, poll_frequency=1)
-options = Options()
-options.add_argument('--headless') # безголовый реж
-service = Service(executable_path=ChromeDriverManager().install())
-driver = webdriver.Chrome( service=service)
-
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=options)
-wait =WebDriverWait(driver,5,poll_frequency=1)
+# options = Options()
+# options.add_argument('--headless') # безголовый реж
+# service = Service(executable_path=ChromeDriverManager().install())
+# driver = webdriver.Chrome( service=service)
+#
+# service = Service(ChromeDriverManager().install())
+# driver = webdriver.Chrome(service=service, options=options)
+# wait =WebDriverWait(driver,5,poll_frequency=1)
 
     driver.get("https://demoqa.com/text-box")
 
