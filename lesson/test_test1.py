@@ -7,6 +7,12 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 
+def test_your_function():
+    options = Options()
+    options.add_argument('--headless')
+    service = Service(ChromeDriverManager().install())
+    driver = webdriver.Chrome(service=service, options=options)
+    wait = WebDriverWait(driver, 5, poll_frequency=1)
 options = Options()
 options.add_argument('--headless') # безголовый реж
 service = Service(executable_path=ChromeDriverManager().install())
@@ -62,3 +68,5 @@ Code_200.click()
 time.sleep(3)
 
 driver.back()
+
+driver.quit()
